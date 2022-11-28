@@ -1,0 +1,14 @@
+[
+    { "id": 1, "nombre": "6 vinos malbec", "categoria": "promos", "stock": 15, "precio": 1750, "imgUrl": "./assets/promo-1.jpg" },
+    { "id": 2, "nombre": "6 vinos cabernet", "categoria": "promos", "stock": 30, "precio": 1000, "imgUrl": "./assets/promo-2.jpg" },
+    { "id": 3, "nombre": "3 vinos blend", "categoria": "promos", "stock": 0, "precio": 500, "imgUrl": "./assets/promo-3.jpg" },
+    { "id": 4, "nombre": "6 vinos mix", "categoria": "promos", "stock": 10, "precio": 2000, "imgUrl": "./assets/promo-4.jpg" },
+    { "id": 5, "nombre": "combo fernet", "categoria": "combo", "stock": 7, "precio": 3300, "imgUrl": "./assets/combo-1.jpg" },
+    { "id": 6, "nombre": "combo beefeeter", "categoria": "combo", "stock": 9, "precio": 4200, "imgUrl": "./assets/combo-2.jpg" },
+    { "id": 7, "nombre": "combo absolut", "categoria": "combo", "stock": 18, "precio": 3500, "imgUrl": "./assets/combo-absolut.jpg" },
+    { "id": 8, "nombre": "combo aperol-spritz", "categoria": "combo", "stock": 22, "precio": 4000, "imgUrl": "./assets/combo-4.webp" },
+    { "id": 9, "nombre": "zorro salvaje malbec", "categoria": "mas vendido", "stock": 3, "precio": 1000, "imgUrl": "./assets/zorro-malbec.jpeg" },
+    { "id": 10, "nombre": "la posta rose", "categoria": "mas vendido", "stock": 5, "precio": 2500, "imgUrl": "./assets/laposta.rose.jpg" },
+    { "id": 11, "nombre": "portillo sb", "categoria": "mas vendido", "stock": 23, "precio": 2200, "imgUrl": "./assets/portilli.sb.jpeg" },
+    { "id": 12, "nombre": "la linda malbec", "categoria": "mas vendido", "stock": 12, "precio": 1150, "imgUrl": "./assets/linda-malbec.jpg" }
+]
