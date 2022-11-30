@@ -1,0 +1,499 @@
+@import url("https://fonts.googleapis.com/css2?family=Delius+Unicase&family=Forum&family=Koulen&family=Montserrat:wght@100;300;400;700&family=Parisienne&family=Questrial&family=Quicksand&family=Roboto+Mono:wght@200;400&display=swap");
+
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+  /* Paleta de color primario */
+  --clr-primario-1: #8b1818;
+  --clr-primario-2: #f3260b;
+  --clr-primario-3: #4b0903;
+  --clr-primario-4: #e4230d;
+  --clr-primario-5: #ec7063;
+  --clr-primario-6: #a0180979;
+  --clr-primario-7: #cb4335;
+  --clr-primario-8: #b03a2e;
+  --clr-primario-9: #943126;
+  --clr-primario-10: #78281f;
+
+  --clr-grey-1: hsl(209, 61%, 16%);
+  /* Color del body */
+  --clr-body-1: hsl(0, 0%, 97%);
+  --clr-body-2: hsl(212, 33%, 89%);
+  --clr-body-3: hsl(210, 36%, 96%);
+  /* Estilos de sombras */
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  /* Atributos */
+  --transition-1: all 0.3s linear;
+  --spacing: 0.1rem;
+  --radius: 0.25rem;
+}
+
+/*
+=============== 
+Global Styles
+===============
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "montserrat";
+}
+
+body {
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--spacing);
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+p {
+  font-size: 1rem;
+}
+
+/*
+=============== 
+Navbar
+===============
+*/
+
+nav {
+  box-shadow: var(--dark-shadow);
+}
+
+.logo {
+  height: 120px;
+  width: 120px;
+  opacity: 0.9;
+  border-radius: 50%;
+}
+
+.links li a {
+  color: black !important;
+  font-size: 1.9rem;
+  text-transform: capitalize;
+  letter-spacing: var(--spacing);
+  padding: 0.5rem 1rem;
+  transition: var(--transition);
+}
+.nav-link:hover {
+  color: var(--clr-primario-2) !important;
+}
+
+/*
+=============== 
+Carrito Nav-bar
+===============
+*/
+
+#boton-carrito {
+  border: none;
+  color: black;
+  font-size: 3rem;
+  background-color: rgb(138, 7, 7);
+  border-radius: 50%;
+  padding: 10px 20px;
+  transition: all 0.3s;
+}
+
+#boton-carrito:hover {
+  cursor: pointer;
+  color: white;
+  background-color: rgb(138, 7, 7);
+}
+
+#boton-carrito:focus {
+  outline: none;
+}
+
+.prod-en-carrito {
+  transition: all 0.3s ease-in-out;
+}
+.prod-en-carrito:hover {
+  background-color: rgb(79, 225, 79);
+}
+
+.boton-eliminar {
+  background-color: white;
+  color: red;
+  border: none;
+  font-size: 1.5rem;
+}
+
+.boton-eliminar:hover {
+  cursor: pointer;
+  transform: scale(1.3);
+}
+
+.boton-eliminar:focus {
+  outline: none;
+}
+
+/*
+=============== 
+Hero Section
+===============
+*/
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 1rem;
+  background-image: url("../assets/cata.1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-div-text {
+  text-align: center;
+  color: white;
+  padding-bottom: 2rem;
+}
+
+.hero-div-text h2 {
+  color: rgb(138, 7, 7);
+  font-size: 4rem;
+  text-shadow: 4px 4px 5px var(--clr-primario-1);
+}
+
+.hero-div-text p {
+  font-size: 2rem;
+}
+
+.h-img {
+  width: 600px;
+  /* padding: 1rem; */
+  animation: float 3s linear infinite;
+  height: 550px;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0rem);
+  }
+  50% {
+    transform: translateY(3rem);
+  }
+}
+
+.btn-neon,
+.btn-neon:hover {
+  font-size: 1.5rem;
+  width: 150px;
+  height: 50px;
+  position: relative;
+  border-style: none;
+  border-radius: 4px;
+  font-weight: bold;
+  background-color: red;
+  color: white;
+  border: 1px solid red;
+  margin: 10px;
+  box-shadow: 1px 1px 20px 8px red;
+}
+
+.btn-neon {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.btn-neon:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -60px;
+  width: 100%;
+  box-shadow: 0px 0px 70px 10px red;
+}
+
+/*
+=============== 
+Nuestro Menu Section
+===============
+*/
+
+.title h2 {
+  font-size: 4rem;
+  color: var(--clr-primario-6);
+  font-weight: 700;
+  /* border: 3px solid var(--clr-primario-6); */
+  border-radius: 10px;
+  padding: 10px;
+  width: 100%;
+  margin: 50px;
+  /* box-shadow: 1px 1px 20px 8px var(--clr-primario-6); */
+  transition: all 1s;
+}
+
+/*=============== 
+Sección Botones
+===============
+*/
+
+.btn-container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  justify-content: space-evenly;
+  padding: 1.5rem;
+  margin: 1.5rem;
+}
+
+.filter-btn {
+  width: 10rem;
+  height: 2rem;
+  border: 2px var(--clr-primario-6) solid;
+  border-radius: 15px;
+  color: var(--clr-primario-6);
+  font-weight: 900;
+  font-size: 1.1em;
+  box-shadow: 13px 26px 27px 1px rgba(0, 0, 0, 0.48);
+  cursor: pointer;
+  transition: all 0.4s linear;
+  background-color: transparent;
+}
+
+.filter-btn:hover {
+  color: whitesmoke;
+  background-color: var(--clr-primario-2);
+}
+
+/*
+=============== 
+Conteiner del menu
+===============
+*/
+
+.box-container {
+  border: none;
+}
+
+/*
+=============== 
+Cards del menu
+===============
+*/
+
+.foto {
+  height: 280px;
+  width: 100%;
+  object-fit: contain;
+}
+
+/*
+=============== 
+Botones cards menu
+===============
+*/
+
+.btn-compra {
+  display: inline-block;
+  padding: 0.3rem 1rem;
+  border: 0.2rem solid var(--clr-primario-6);
+  color: var(--clr-primario-7);
+  background-color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  margin-top: 1rem;
+}
+
+.btn-compra::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0%;
+  height: 100%;
+  background: var(--clr-primario-2);
+  transition: 0.3s linear;
+  z-index: -1;
+}
+
+.btn-compra:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+.btn-compra:hover {
+  color: #fff;
+}
+
+
+/*=============== 
+Slider Section
+===============
+*/
+
+.img-banner {
+    object-fit: cover;
+    width: 100vw;
+    height: 500px;
+}
+
+/*
+=============== 
+Form
+===============
+*/
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "text text"
+    "img form";
+  height: auto;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.f-image {
+  width: 55vh;
+  height: 55vh;
+  object-fit: cover;
+  grid-area: img;
+  margin: 0 auto;
+}
+
+.f-text {
+  grid-area: text;
+  margin: auto;
+  color: var(--clr-primario-6);
+  font-size: 2.7rem;
+  font-weight: 400;
+}
+
+.f-content {
+  grid-area: form;
+}
+
+/*
+=============== 
+Footer
+===============
+*/
+
+#btn-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  display: none;
+  z-index: 10000;
+} 
+.foot {
+  background-image: linear-gradient(to bottom, #56070c, #641512, #732116, #822e1a, #903a1e);
+  width: 100%;
+  
+}
+  .foot-caja-1 {
+      width: 100%;
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 50px;
+      padding: 45px 0px;
+  }
+
+
+  .foot__enlaces {
+      display: flex;
+      flex-direction: row;
+      list-style: none;
+      text-decoration: none;
+      justify-content: flex-start;
+  }
+
+  .foot__item {
+      margin-left: 16px;
+      font-size: 32px;
+      border-radius: 10px;
+      
+      
+  }
+ .img_foot{
+  height: 50px;
+  width: 50px;
+ }
+
+  .foot__1 figure {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .foot__logo {
+      width: 250px;
+  }
+
+  .foot__santo {
+      color: black;
+  }
+
+  .foot-caja-2 {
+      padding: 15px 10px;
+      text-align: center;
+  }
+
+  .foot__title {
+      background-color: black;
+      color: white;
+      margin-bottom: 50px;
+      font-size: 25px;
+      border: 5px solid black;
+      background-color: black;
+      border-radius: 10px;
+      padding: 10px;
+  }
+  .foot__parrafo{
+      color: black;
+  }
+
+

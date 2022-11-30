@@ -1,0 +1,98 @@
+[
+    {
+        "id": 1,
+        "nombre": "6 vinos malbec",
+        "categoria": "promos",
+        "stock": 15,
+        "precio": 1750,
+        "img": "./assets/promo-1.jpg"
+    },
+    {
+        "id": 2,
+        "nombre": "6 vinos cabernet",
+        "categoria": "promos",
+        "stock": 30,
+        "precio": 1000,
+        "img": "./assets/promo-2.jpg"
+    },
+    {
+        "id": 3,
+        "nombre": "3 vinos blend",
+        "categoria": "promos",
+        "stock": 0,
+        "precio": 500,
+        "img": "./assets/promo-3.jpg"
+    },
+    {
+        "id": 4,
+        "nombre": "6 vinos mix",
+        "categoria": "promos",
+        "stock": 10,
+        "precio": 2000,
+        "img": "./assets/promo-4.jpg"
+    },
+    {
+        "id": 5,
+        "nombre": "combo fernet",
+        "categoria": "combos",
+        "stock": 7,
+        "precio": 3300,
+        "img": "./assets/combo-1.jpg"
+    },
+    {
+        "id": 6,
+        "nombre": "combo beefeeter",
+        "categoria": "combos",
+        "stock": 9,
+        "precio": 4200,
+        "img": "./assets/combo-2.jpg"
+    },
+    {
+        "id": 7,
+        "nombre": "combo absolut",
+        "categoria": "combos",
+        "stock": 18,
+        "precio": 3500,
+        "img": "./assets/combo-absolut.jpg"
+    },
+    {
+        "id": 8,
+        "nombre": "combo aperol-spritz",
+        "categoria": "combos",
+        "stock": 22,
+        "precio": 4000,
+        "img": "./assets/combo-4.webp"
+    },
+    {
+        "id": 9,
+        "nombre": "zorro salvaje malbec",
+        "categoria": "mas vendido",
+        "stock": 3,
+        "precio": 1000,
+        "img": "./assets/zorro-malbec.jpeg"
+    },
+    {
+        "id": 10,
+        "nombre": "la posta rose",
+        "categoria": "mas vendido",
+        "stock": 5,
+        "precio": 2500,
+        "img": "./assets/laposta.rose.jpg"
+    },
+    {
+        "id": 11,
+        "nombre": "portillo sb",
+        "categoria": "mas vendido",
+        "stock": 23,
+        "precio": 2200,
+        "img": "./assets/portilli.sb.jpeg"
+    },
+    {
+        "id": 12,
+        "nombre": "la linda malbec",
+        "categoria": "mas vendido",
+        "stock": 12,
+        "precio": 1150,
+        "img": "./assets/linda-malbec.jpg"
+    }
+]

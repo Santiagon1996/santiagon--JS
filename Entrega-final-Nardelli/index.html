@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords"
+        content="vineria, vinos, vinos argentinos, mendoza vinos, salta vinos, whisky, destilados, inicio">
+    <meta name="description"
+        content="Envios a Todo el País. Colecciones Únicas. Suscribite hoy. Las Mejores Bodegas. Una Experiencia Exclusiva. Invitación a Catas. Todos los Medios de Pago.">
+    <!-- Boostrap Css link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
+    <!-- Css link -->
+    <link rel="stylesheet" href="./css/styles.css" />
+
+    <!-- Swiper Css link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+    <!-- Toastify Css Link -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css" />
+    <link rel="shortcut icon" href="./assets/vino.png">
+    <title>EL mundo del vino</title>
+</head>
+<section>
+    <div>
+        <button type="button" class="btn btn-danger btn-floating btn-lg" id="btn-back-to-top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        <!-- Nav-Bar -->
+        <header id="header">
+
+            <nav class="navbar navbar-expand-md navbar-light bg-light ">
+
+                <div class="container">
+
+                    <a class="navbar-brand" href="index.html"><img src="./assets/vino.png" class="logo"
+                            alt="logo" /></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarNav">
+
+                        <ul class="navbar-nav links mx-auto gap-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#header">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#menu">Menú</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#reservar">Delivery</a>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                    <button id="boton-carrito" data-bs-toggle="modal" data-bs-target="#miModal">
+                        <i class="fas fa-shopping-cart"></i><span id="contadorCarrito">0</span>
+                    </button>
+
+                </div>
+            </nav>
+        </header>
+
+        <!-- Modal Div Carrito -->
+
+        <div class="modal" id="miModal" tabindex="-1">
+
+            <div class="modal-dialog modal-lg">
+
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalSizeLabel">Carrito</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <div class="modal-body">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Id</th>
+                                    <th scope="col">Producto</th>
+                                    <th scope="col">Cantidad</th>
+                                    <th scope="col">Precio</th>
+                                </tr>
+                            </thead>
+                            <tbody id="carrito-contenedor">
+                                <!-- Traido de js -->
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="modal-footer">
+                        <p class="precioProducto">
+                            Precio total: $ <span id="precioTotal">0</span>
+                        </p>
+                        <button id="vaciar-carrito" class="boton-agregar">
+                            Vaciar Carrito
+                        </button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                            Close
+                        </button>
+                        <button type="button" id="confirmar" class="btn btn-primary">
+                            Confirmar
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+
+            <div class="hero-div-text">
+
+                <h2>Bienvenido a Santos Vinos</h2>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint nostrum
+                    autem laudantium natus perferendis eum.
+                </p>
+                <button href="#reservar" class="btn-neon">Pide Ya!</button>
+
+            </div>
+        </section>
+
+        <!-- Menu Principal Section -->
+        <div class="container" id="menu">
+            <!-- Titulo -->
+            <div class="container-lg title text-center">
+                <h2>Nuestros Productos</h2>
+            </div>
+
+            <!-- Botones de filtro -->
+            <div class="btn-container">
+
+                <button class="filter-btn" type="button" data-id="Todos">Todos</button>
+
+                <button class="filter-btn" type="button" data-id="promos">
+                    Promos
+                </button>
+
+                <button class="filter-btn" type="button" data-id="combos">
+                    Combos
+                </button>
+
+                <button class="filter-btn" type="button" data-id="mas vendido">
+                    Mas vendidos
+                </button>
+
+            </div>
+
+            <!-- Menu -->
+            <div class="container">
+                <div class="row row-cols-sm-2 row-cols-md-3 box-container" id="box-container">
+                    <!-- Menu traido desde Js -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Panel de imagenel -->
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="img-banner" src="./assets/nietosenetiner-promo.jpg" alt="imagen" class="d-block w-100"
+                        alt="banner">
+                </div>
+                <div class="carousel-item">
+                    <img class="img-banner" src="./assets/colome-promo.jpg" alt="imagen" class="d-block w-100"
+                        alt="banner">
+                </div>
+                <div class="carousel-item">
+                    <img class="img-banner" src="./assets/jameson-taza.jpg" alt="imagen" class="d-block w-100"
+                        alt="banner">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    </div>
+</section>
+
+<!-- Form Section -->
+
+<section class="form" id="reservar">
+
+    <h2 class="f-text">Realiza Tu Pedido</h2>
+
+    <img class="f-image" src="./assets/vineria.3.jpg" alt="vineria" />
+
+    <div class="f-content">
+
+        <form class="row g-5 p-2 needs-validation" novalidate>
+
+            <div class="col-lg-4 fs-5">
+                <label for="validationCustom01" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="validationCustom01" placeholder="Escriba su nombre"
+                    required>
+                <div class="valid-feedback">
+                    Dato valido!
+                </div>
+                <div class="invalid-feedback">
+                    Ingrese su nombre
+                </div>
+            </div>
+
+            <div class="col-lg-4 fs-5">
+                <label for="validationCustom02" class="form-label">Telefono</label>
+                <input type="number" class="form-control" id="validationCustom02" placeholder="3416 453 231" required>
+                <div class="valid-feedback">
+                    Dato valido!
+                </div>
+                <div class="invalid-feedback">
+                    Ingrese su telefono
+                </div>
+            </div>
+
+            <div class="col-lg-4 fs-5">
+                <label for="validationCustom03" class="form-label">Dirección</label>
+                <input type="text" class="form-control" id="validationCustom03" required>
+                <div class="invalid-feedback">
+                    No has ingresado tu dirección
+                </div>
+            </div>
+
+            <div class="col-lg-4 fs-5">
+                <label for="validationCustom04" class="form-label">Desea envio a domicilio o retiro en
+                    tienda?</label>
+                <select class="form-select" id="validationCustom04" required>
+                    <option>Delivery</option>
+                    <option>Recogida en tienda</option>
+                </select>
+            </div>
+
+            <div class="col-lg-8 fs-5">
+                <label for="validationCustom05" class="form-label">
+                    Realice su encargo
+                </label>
+                <textarea style="height: 190px" class="form-control" id="validationTextarea"
+                    placeholder="Haga su pedido aqui" required></textarea>
+                <div class="invalid-feedback">
+                    Antes de continuar, realice su encargo por favor.
+                </div>
+            </div>
+
+            <div class="col-12 fs-5">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                    <label class="form-check-label" for="invalidCheck">
+                        Acepto termino y condiciones
+                    </label>
+                    <div class="invalid-feedback">
+                        Debes aceptar los terminos y condiciones antes de continuar
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <button class="btn btn-dark" type="submit">Realizar pedido</button>
+            </div>
+
+        </form>
+
+</section>
+<!-- Footer -->
+<footer class="foot">
+    <div class="foot-caja-1">
+        <div class="foot__1">
+            <figure>
+                <img class="foot__logo" src="./assets/estante.png" alt="logo">
+                <h2 class="foot__santo"><b>Santo Vino</b></h2>
+            </figure>
+        </div>
+        <div class="foot__1">
+            <h2 class="foot__title">SOBRE NOSOTROS</h2>
+            <p class="foot__parrafo">Vineria familiar, con enologos y sommelier certificados </p>
+            <p class="foot__parrafo">Nuestras intenciones son transmitir el gran mundo del vino y sus allegados</p>
+        </div>
+        <div class="foot__1">
+            <h2 class="foot__title">SEGUINOS</h2>
+            <ul class="foot__enlaces">
+                <li class="foot__item"><a href="https://www.instagram.com" target="_blank"><img class="img_foot"
+                            src="./assets/instagram.png" alt="instagram"></a></li>
+                <li class="foot__item"><a href="https://www.facebook.com" target="_blank"><img class="img_foot"
+                            src="./assets/facebook.png" alt="facebook"></a></li>
+                <li class="foot__item"><a href="https://wa.me/+5492415462481" target="_blank"><img class="img_foot"
+                            src="./assets/whatsapp.png" alt="wassap"></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="foot-caja-2">
+        <small>&#9426; 2022 <b>Santo Vino</b> - Todos los Derechos Reservados.</small>
+    </div>
+</footer>
+
+
+
+<!-- Toastify Script -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+<!-- Boostrap Js -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+<!-- Swiper Script -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+<!-- Awesome icons -->
+<script src="https://kit.fontawesome.com/0149485272.js" crossorigin="anonymous"></script>
+
+<!-- Sweet Alert -->
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+<!-- Javascript  -->
+<script src="./javasCript/globales.js"></script>
+<script src="./javasCript/funciones.js"></script>
+<script src="./javasCript/producto.js"></script>
+
+</body>
+
+</html>
